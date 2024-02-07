@@ -43,7 +43,7 @@ def menu():
         choice_modif = input("Voulez vous le modifier o,n ? ")
         while i == 0:
             if choice_modif == "o":
-                start_time = input("Quel temps de départ souhaitez vous lui donner (au format hh:mm:ss) ? \n")
+                start_time = input("Quel temps souhaitez vous lui donner (au format hh:mm:ss) ? \n")
                 try:
                     hours, minutes, seconds = map(int, start_time.split(':'))
                     StartTime(hours, minutes, seconds, str(name))
@@ -64,7 +64,8 @@ def menu():
 
     if choice == "4":
         timersDos = "timers"
-        dossier = f'E:\programmation\projet\obstimer\{timersDos}'
+        user = "Users"
+        dossier = f'C:\{user}\gabpi\obstimer\{timersDos}'
         print(f"\nListe des timers :")
         for fichier in os.listdir(dossier):
             if fichier.endswith('.txt'):
